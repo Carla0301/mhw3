@@ -1,0 +1,580 @@
+@media (max-width:500px){
+    article{
+        margin:0px 10px;
+        
+    }
+}
+
+.flex_item1, .link_comunicato, .link_footer1, .items_footer_banda1 a, .link_footer2, #privacy, #github{
+    text-decoration: none;
+}
+
+.logo{
+    color:cadetblue;
+    padding-right: 420px;
+    text-align: center;
+    font-family: "Vujahday Script", cursive;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: 23px;
+    margin: 15px;  
+}
+
+@media(max-width:500px){
+    .logo{
+        text-align: center;
+    }
+}
+
+a {
+    cursor: pointer;
+}
+
+
+#menu_bar{
+    display:flex;
+    justify-content: flex-end;
+    align-items:center;
+    height: 60px;
+    font-family: helvetica, sans-serif;
+    /* position: fixed;
+    top:0;
+    left:0;
+    right:0; */
+}
+
+
+nav{
+    background-color: white;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+}
+
+.flex_item1{
+    color:darkslategrey;
+    font-size: 15px;
+    padding:8px;
+}
+
+.flex_item1:hover, .flex_item1:active{
+    color:mediumblue;
+}
+
+
+#riga1 {
+    background-color:aliceblue;
+    height: 5px;
+    margin: 0px;
+}
+
+#riga2 {
+    background-color:rgb(209, 231, 250);
+    height: 5px;
+    margin: 0px;
+}
+
+#riga3 {
+    background-color:lightblue;
+    height: 5px;
+    margin: 0px;
+}
+
+#riga4 {
+    background-color:lightskyblue;
+    height: 5px;
+    margin: 0px;
+}
+
+#riga5 {
+    background-color:deepskyblue;
+    height: 5px;
+    margin: 0px;
+}
+
+
+header{
+    background-image: url(https://tidymo.com/wp-content/uploads/2020/04/20200419_093341-2-scaled.jpg);
+    background-size: 100%;
+    position:relative;
+    z-index: -1;
+    height: 750px;
+    width: 100%;
+}
+
+#overlay {
+    background-color:
+      rgba(255, 127, 80, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+@media(max-width:500px){
+    .flex_item1, header{
+        display:none;
+    }
+}
+
+@media(max-width:500px){
+    #menu_bar em{
+        padding:0px;
+    }
+}
+
+@media(max-width:500px){
+    #menu_bar{
+        justify-content: center;
+    }
+}
+@media(max-width:500px){
+    nav{
+        width:100vw;
+    }
+}
+
+#overlay p{
+    color:azure;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+
+#viaggia_con_noi{
+    background-color: lightskyblue;
+    border-radius: 3px;
+    margin:-90px 170px;
+    z-index: 1;
+    height: 620px;
+}
+
+@media(max-width:500px){
+    #viaggia_con_noi{
+        margin:30% 0px 0px 0px;
+        width:100%;
+        height:auto;
+    }
+}
+
+@media(max-width:500px){
+    #comunicato p{
+        padding:0px;
+        width:95%;
+    }
+}
+
+#titolo_viaggia_con_noi{
+    color:mediumblue;
+    font-size: 30px;
+    padding-bottom: 5px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+#viaggia_con_noi strong{
+    font-size: 50px;
+}
+
+@media(max-width:500px){
+    #titolo_viaggia_con_noi{
+    font-size: 2rem;
+    }
+}
+
+@media(max-width:500px){
+    #titolo_viaggia_con_noi strong{
+        font-size: 2rem;
+    }
+}
+
+#flexbox_scelte1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+
+#flexbox_scelte2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+@media(max-width:500px){
+    #flexbox_scelte1, #flexbox_scelte2{
+        flex-direction: column;
+        margin: 0px;
+        font-size:1.2rem;
+        align-items: stretch;
+    }
+
+}
+
+.scelte{
+    background-color: azure;
+    color:darkslategrey;
+    margin: 4px 7px;
+    padding: 15px;
+    border-radius: 3px;
+    border-radius: 3px;
+    flex-grow: 1;
+    text-align:left;
+
+}
+
+#tasto_trova{
+    background-color: mediumblue;
+    color:azure;
+    text-align: center;
+    margin: 4px 7px;
+    padding: 15px;
+    border-radius: 3px;
+    border-radius: 3px;
+    flex-grow: 1;
+}
+
+#tasto_trova:hover, #tasto_trova:active{
+    background-color: lightskyblue;
+    text-decoration: none;
+}
+
+#comunicato{
+    text-align: center;
+    color: mediumblue;
+    font-size: 30px;
+    padding: 10px;
+    margin:10px 250px;
+}
+
+.link_comunicato:hover{
+    color:darkslategrey;
+}
+
+@media(max-width:500px){
+    #comunicato{
+        width:100%;
+        margin:0px;
+        padding:10px;
+    }
+}
+
+#viaggi h1{
+    text-align: center;
+    font-family: helvetica, sans-serif;
+    color:darkslategrey;
+    padding: 30px;
+    margin-top: 90px;
+}
+
+@media(max-width:500px){
+    #viaggi h1{
+        margin:20%;
+        padding:0px;
+    }
+}
+
+#flex_img_viaggi{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    color:darkslategrey;
+}
+
+.items_viaggi{
+    height:450px;
+    width: 300px;
+    background-color: azure;
+    border: solid darkslategrey 1px;
+    border-radius: 2px;
+}
+
+@media(max-width:500px){
+    .items_viaggi{
+        width:100%;
+        margin:10%;
+    }
+}
+
+#img_venezia, #img_roma, #img_palermo, #img_trento {
+    display:inline-block;
+    width:300px;
+    height: 200px;
+}
+
+@media(max-width:500px){
+    #flex_img_viaggi{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin: 15px;
+    }
+}
+
+
+.items_viaggi p, .items_viaggi h1{
+    text-align: left;
+    margin: 20px;
+}
+
+#flex_servizi{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    color:darkslategrey;
+    margin-top: 100px;
+    margin-left: 80px;;
+}
+
+
+.item_servizi{
+    height: 130px;
+    width: 150px;
+}
+
+.item_servizi img{
+    display:inline-block;
+    width:100px;
+    height: 100px;
+}
+
+
+@media(max-width:500px){
+    #flex_servizi{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:center;
+        margin:auto;
+    }
+}
+
+@media(max-width:500px){
+    .item_servizi{
+        width:30%;
+        height:100%;
+        text-align: center;
+    }
+}
+
+#app{
+    display:flex;
+    height: 300px;
+    width: 100%;
+    background-color: lightskyblue;
+    margin: 300px 0px;
+    z-index: 0;
+    align-items: center;
+}
+
+#app img{
+    height: 500px;
+    width: 310px;
+    margin-left: 200px;
+}
+
+body{
+    width: 100%;
+}
+
+#app p{
+    margin-left: 270px;
+    font-size: 20px;
+    color:darkslategrey;
+}
+
+#flex_loghi{
+    display:flex;
+    height: 60px;
+    width: 100px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#flex_loghi img{
+    height: 50px;
+    width:54px;
+    margin: 10px 20px;
+    border-radius:50%;
+}
+
+@media(max-width:500px){
+    #app{
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        margin-top:20%;
+        height:10%;
+        margin-bottom: 0px;
+    }
+}
+
+@media(max-width:500px){
+    #app img{
+        width: 70%;
+        height:auto;
+        margin-left:0px;
+        margin-bottom: 5%;
+    }
+}
+
+@media(max-width:500px){
+    #app p{
+        margin:auto;
+        height: auto;
+    }
+}
+
+@media(max-width:500px){
+    #flex_loghi img{
+        width: 80%;
+        height: auto;
+        margin:auto;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+@media(max-width:500px){
+    #flex_loghi{
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+#footer_banda1{
+    display:flex;
+    height: 400px;
+    width: 100%;
+    background-color: lightskyblue;
+    margin-top:300px;
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#footer_banda2{
+    display:flex;
+    height: 150px;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-bottom: 0px;
+}
+
+@media(max-width:500px){
+    #footer_banda1{
+        flex-direction: column;
+        align-items: flex-start;
+        width:100%;
+        height:auto;
+        margin-top:10%;
+    }
+}
+
+.items_footer_banda1{
+    color: darkslategrey;
+    width: 250px;
+    height: 300px;
+    font-size: 18px;
+}
+
+@media(max-width:500px){
+    .items_footer_banda1{
+        width:100%;
+        height: 35%;
+        padding-left: 4%;
+    }
+}
+
+.items_footer_banda1 img{
+    height: 50px;
+    width:54px;
+    margin: 10px 20px;
+    border-radius:50%;
+}
+
+@media(max-width:500px){
+    .items_footer_banda1 img{
+        width:14.5%;
+        
+    }
+}
+
+.items_footer_banda2{
+    color: darkslategrey;
+    width: 250px;
+    height: 60px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 1000;
+}
+
+@media(max-wdth:500px){
+    #footer_banda2{
+        width:100%;
+        height: 20%;
+    }
+}
+
+@media(max-width:500px){
+    .items_footer_banda2{
+        font-size: 0.8rem;
+    }
+}
+
+#link_utili{
+    text-align: center;
+    font-size: 20px;
+    margin: 0px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+}
+
+#copyright{
+    color: darkslategrey;
+    text-align: center;
+    font-size: 15px;
+}
+
+.menu_tendina{
+    width:auto;
+    height:auto;
+    border: 1px solid darkgrey;
+    border-radius: 2px;
+    position: fixed;
+    top:10%;
+    line-height: 130%;
+    background-color: rgba(240,255,255, 0.95);
+    padding:0.5%;
+    color: darkslategrey;
+    font-size: 1rem;
+}
+
+.hidden{
+    display:none;
+}
+
+.bottoni_viaggi{
+    border-radius: 4px;
+    margin-left: 17%;
+    margin-top: 5%;
+    background-color:lightblue;
+    color: darkslategrey;
+    border: 1px solid darkgrey;
+}
+
+.form_api, #calendario{
+    text-align: center;
+    margin:5%;
+}
