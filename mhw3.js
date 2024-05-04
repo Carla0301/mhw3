@@ -122,17 +122,29 @@ const bottone_trento=document.querySelector("#bottone_trento");
 bottone_trento.addEventListener("click", onClickScopriDiPiu);
 
 
+
+
 //api meteo
 
-function chiudiMeteo(event){
-    if(event.key==="Escape"){
-        const blocco_risultato=document.querySelector("#results_meteo");
+
+// function chiudiMeteo(event){
+//     if(event.key==="Escape"){
+//         const blocco_risultato=document.querySelector("#results_meteo");
+//         blocco_risultato.innerHTML="";
+//         // const testo_barra_input=document.querySelector("#content");
+//         // console.log(testo_barra_input)
+//         // testo_barra_input.innerHTML="";
+//         //non funonzia
+//     }
+// }
+
+//per chiudere i risultati delle api
+function chiudiRisultati(event){
+    
+        const blocco_risultato=event.currentTarget;
+        // console.log(event.currentTarget)
         blocco_risultato.innerHTML="";
-        // const testo_barra_input=document.querySelector("#content");
-        // console.log(testo_barra_input)
-        // testo_barra_input.innerHTML="";
-        //non funonzia
-    }
+    
 }
 
 function onJson_meteo(json){
@@ -141,18 +153,17 @@ function onJson_meteo(json){
     const risultato=json;
     console.log(risultato);
 
-    const blocco_risultato=document.querySelector("#results_meteo");
 
     for(let item of risultato.days){
         const previsione_giornata=document.createElement("p");
         previsione_giornata.textContent=item.datetime+" temperatura: "+item.temp+". "+item.description;
-        blocco_risultato.appendChild(previsione_giornata);
+        blocco_risultato_meteo.appendChild(previsione_giornata);
         
     }
 
     const messaggio_chiusura=document.createElement("p");
-    messaggio_chiusura.textContent="premi escape per cancellare le previsioni";
-    blocco_risultato.appendChild(messaggio_chiusura);
+    messaggio_chiusura.textContent="Fai doppio click per cancellare le previsioni";
+    blocco_risultato_meteo.appendChild(messaggio_chiusura);
 }
 
 
@@ -184,7 +195,10 @@ form_meteo.addEventListener("submit", search);
 const key_meteo="98PN893CB5TC5MNASCALHZULR"
 const meteo_endpoint="https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"
 
-window.addEventListener('keydown', chiudiMeteo);
+
+const blocco_risultato_meteo=document.querySelector("#results_meteo");
+
+blocco_risultato_meteo.addEventListener('dblclick', chiudiRisultati);
 
 
 
@@ -196,19 +210,30 @@ function onJson_music(json){
     console.log("siamo alla json music")
     console.log(json)
 
+
+
     if(json.tracks){
         console.log("canzoni")
         const risultati_brani=json.tracks.items
         for(let item of risultati_brani){
-            console.log(item.name)
+           console.log(item.name)
+
+            const risultato_brani=document.createElement("p");
+            risultato_brani.textContent=item.name;
+            blocco_risultato_spotify.appendChild(risultato_brani);
         }
     }
 
     if(json.albums){
         console.log("album")
-        const risultati_album=json.albums.items
+        const risultati_album=json.albums.items;
+
+
         for(let item of risultati_album){
-            console.log(item.name+" Numero tracce: "+item.total_tracks+" Uscito il: "+item.release_date)
+            //console.log(item.name+" Numero tracce: "+item.total_tracks+" Uscito il: "+item.release_date)
+            const risultato_album=document.createElement("p");
+            risultato_album.textContent=item.name+" Numero tracce: "+item.total_tracks+" Uscito il: "+item.release_date;
+            blocco_risultato_spotify.appendChild(risultato_album);
         }
     }
 
@@ -216,7 +241,11 @@ function onJson_music(json){
         console.log("artisti")
         const risultati_artisti=json.artists.items
         for(let item of risultati_artisti){
-            console.log(item.name+" Numero followers: "+item.followers.total)
+            //console.log(item.name+" Numero followers: "+item.followers.total)
+
+            const risultato_artisti=document.createElement("p");
+            risultato_artisti.textContent=item.name+" Numero followers: "+item.followers.total;
+            blocco_risultato_spotify.appendChild(risultato_artisti);
         }
     }
 
@@ -283,3 +312,9 @@ fetch(spotify_endpoint_token,{
 //aggiungo l'event listener al form
 const form_spotify=document.querySelector("#search_music");
 form_spotify.addEventListener("submit", search_music);
+
+
+const blocco_risultato_spotify=document.querySelector("#results_spotify");
+
+
+blocco_risultato_spotify.addEventListener('click', chiudiRisultati);
